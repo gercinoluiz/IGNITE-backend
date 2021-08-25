@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test API",
+        "description": "API TEST",
+        "version": "1.0.0.",
+        "contact": {
+            "email": "gercino@example.com"
+        }
+    },
+    "paths": {
+        "/cars": {
+            "get": {
+                "tags": ["Cars"],
+                "summary": "List all Cars",
+                "description": "You can list all available cars",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
